@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "NewSafmedSession";
+}
+
+@using Safmeds.Repo.Enums
+
+<h2>Please specify which Safmed session you wish to begin....</h2>
+
+<br />
+
+@using (Html.BeginForm("NewSafmedSession", "MyAccount"))
+{
+
+    <label>Select your Level</label>@Html.DropDownList("levelPreference", EnumHelper.GetSelectList(typeof(Levels)), new { @class = "form-control" })
+
+    <br />
+    
+    <label>Select your Topic</label>@Html.DropDownList("levelPreference", EnumHelper.GetSelectList(typeof(Topics)), new { @class = "form-control" })
+
+    <br />
+    
+    <input type="submit" value="Begin Safmed!" />
+
+}

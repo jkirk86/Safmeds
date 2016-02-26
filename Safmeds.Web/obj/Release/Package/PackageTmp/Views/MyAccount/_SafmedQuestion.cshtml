@@ -1,0 +1,15 @@
+﻿@model Safmeds.Web.ViewModels.SafmedViewModel
+
+    <h1>@Model.Question</h1>
+
+    @Html.EditorFor(x => x.Answer, new { id = "answer" })
+    @Html.HiddenFor(x => x.SafmedId, new { id = "safmedId" })
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#Answer').focus();
+    })
+
+</script>

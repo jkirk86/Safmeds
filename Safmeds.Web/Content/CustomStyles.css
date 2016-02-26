@@ -1,0 +1,41 @@
+﻿body {
+}
+
+.greenRound {
+
+    border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px; 
+}
+
+.frontCard {
+    height:300px;
+    width:1140px;
+    color:#d9edf7;
+}
+
+.backCard {
+    height:300px;
+    width:1140px;
+    color:#eee;
+}
+
+.ui-widget-overlay
+{
+  opacity: .99 !important; /* Make sure to change both of these, as IE only sees the second one */
+  filter: Alpha(Opacity=99) !important;
+
+  background: rgb(31, 30, 30) !important; /* This will make it darker */
+}
+
+.questionFont p {
+    font-family:'Comic Sans MS';
+    font-size:x-large;
+}
+
+.tb5 {
+	border:2px solid #456879;
+	border-radius:10px;
+	height: 50px;
+	width: 60px;
+}

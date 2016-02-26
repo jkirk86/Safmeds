@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div style="float:right; width: 580px">
+    <ul class="bxslider">
+        <li><img src="~/Images/educational-goals.jpg" /></li>
+        <li><img src="~/Images/progress.jpg" /></li>
+    </ul>
+</div>
+
+<div class="jumbotron">
+    <h1>SAFMEDS</h1>
+    <p class="lead">"Say All Fast Minute Each Day Shuffled"</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            Mauris viverra, justo placerat luctus laoreet, arcu mi finibus ligula, et aliquet lectus risus ac sem. Cras at tempus enim, vel maximus arcu.
+            Aenean a lectus eget metus viverra tempor. Vivamus eu rutrum lorem. Aliquam vel fringilla dolor, non finibus nibh. Vivamus vitae pellentesque libero.
+            In pellentesque tortor in turpis blandit, in varius nulla varius. Suspendisse id dolor vitae tortor faucibus pretium.
+            Nam cursus, justo sed luctus consequat, arcu ligula auctor ligula.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Collaboration Enquires</h2>
+        <p>Nulla nec nisi at est aliquam ullamcorper. Nunc purus justo, iaculis a ultrices imperdiet, semper sed elit.
+         Mauris facilisis egestas diam vel blandit. Donec molestie pretium tincidunt. Phasellus feugiat porttitor sem, at vulputate ex bibendum quis.
+         </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get in touch!</h2>
+        <p>Maecenas sed viverra purus, quis mattis nunc. Morbi elit turpis, auctor aliquam neque eget, aliquam cursus erat.
+         Morbi lobortis lorem et enim accumsan, et bibendum diam suscipit. Nullam tincidunt neque id pellentesque congue.
+         Integer id odio varius, vulputate orci a, ultricies risus. Phasellus porttitor vel nunc ac luctus.
+         Nullam ut arcu id sem iaculis pellentesque. Nullam nulla felis,</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+
+                auto: true,
+                autoControls: false,
+                pager: false,
+                hideControlOnEnd: true
+
+            });
+        });
+    </script>
+}

@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.greenRound {
+
+    border-radius: 25px;
+    border: 2px solid #8AC007;
+    padding: 20px; 
+}
+
+.frontCard {
+    height:300px;
+    width:1140px;
+    color:#d9edf7;
+}
+
+.backCard {
+    height:300px;
+    width:1140px;
+    color:#eee;
+}
+

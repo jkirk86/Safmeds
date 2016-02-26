@@ -1,0 +1,16 @@
+﻿@model string
+
+<h2>@Model.ToString()</h2>
+
+@if (ViewBag.Correct)
+{
+  <script type="text/javascript">
+      countCorrect++;
+  </script>
+}
+else
+{
+  <script type="text/javascript">
+        countIncorrect++;
+  </script>
+}

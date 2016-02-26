@@ -1,0 +1,9 @@
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\bin\Release\Safmeds.Core.dll
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\bin\Release\Safmeds.Core.pdb
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\bin\Release\Safmeds.Repo.dll
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\bin\Release\EntityFramework.dll
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\bin\Release\Safmeds.Repo.pdb
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\bin\Release\EntityFramework.xml
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\obj\Release\Safmeds.Core.csprojResolveAssemblyReference.cache
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\obj\Release\Safmeds.Core.dll
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Core\obj\Release\Safmeds.Core.pdb

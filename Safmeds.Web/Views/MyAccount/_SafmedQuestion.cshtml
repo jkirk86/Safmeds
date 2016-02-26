@@ -1,0 +1,25 @@
+﻿@model Safmeds.Web.ViewModels.SafmedViewModel
+
+    @*<h1>@Model.Question</h1>*@
+
+
+    <p style="font-family:'Comic Sans MS';font-size:70px;">
+    @Model.Question</p>
+
+    @*@Html.EditorFor(x => x.Answer, new { id = "answer" })*@
+
+    <div>
+    @Html.TextBoxFor(x => x.Answer, new { @class = "tb5" })
+    </div>
+    
+    @Html.HiddenFor(x => x.SafmedId, new { id = "safmedId" })
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#Answer').focus();
+    })
+    
+
+</script>

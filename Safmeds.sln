@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Safmeds.Web", "Safmeds.Web\Safmeds.Web.csproj", "{44DD438F-D0FE-497B-8C40-F34C88454EB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Safmeds.Repo", "Safmeds.Repo\Safmeds.Repo.csproj", "{912D6746-E95B-4D8E-BEEA-512492BC3D60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Safmeds.Core", "Safmeds.Core\Safmeds.Core.csproj", "{768E4B41-0A48-42CC-9D28-4B39BE664AA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44DD438F-D0FE-497B-8C40-F34C88454EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44DD438F-D0FE-497B-8C40-F34C88454EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44DD438F-D0FE-497B-8C40-F34C88454EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44DD438F-D0FE-497B-8C40-F34C88454EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912D6746-E95B-4D8E-BEEA-512492BC3D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912D6746-E95B-4D8E-BEEA-512492BC3D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912D6746-E95B-4D8E-BEEA-512492BC3D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912D6746-E95B-4D8E-BEEA-512492BC3D60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{768E4B41-0A48-42CC-9D28-4B39BE664AA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768E4B41-0A48-42CC-9D28-4B39BE664AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768E4B41-0A48-42CC-9D28-4B39BE664AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768E4B41-0A48-42CC-9D28-4B39BE664AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

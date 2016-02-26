@@ -1,0 +1,12 @@
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\bin\Debug\Safmeds.Repo.dll.config
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\bin\Debug\Safmeds.Repo.dll
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\bin\Debug\Safmeds.Repo.pdb
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\bin\Debug\EntityFramework.dll
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\bin\Debug\EntityFramework.xml
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\obj\Debug\Safmeds.Repo.csprojResolveAssemblyReference.cache
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\obj\Debug\Safmeds.Repo.Migrations.init.resources
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\obj\Debug\Safmeds.Repo.csproj.GenerateResource.Cache
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\obj\Debug\Safmeds.Repo.dll
+C:\Users\John\Documents\Visual Studio 2013\Projects\Safmeds\Safmeds.Repo\obj\Debug\Safmeds.Repo.pdb

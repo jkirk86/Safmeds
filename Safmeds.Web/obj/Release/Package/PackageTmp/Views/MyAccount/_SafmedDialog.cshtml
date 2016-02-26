@@ -1,0 +1,92 @@
+﻿
+<div id="card" style="width: 300px;">
+    <div class="front" style=" height:200px; width:200px; background-color:#d9edf7;">
+
+        
+    </div>
+
+    <div class="back" style=" height:200px; width:200px; background-color: #eee;">
+
+        
+        
+    </div>
+</div>
+
+<div id="countdown" style="float:right;">
+   
+</div>
+
+
+<script type="text/javascript">
+
+    //soon as the dialog loads, get a question
+    GetQuestion();
+
+    //begin 1 minute timer here
+
+    $("#countdown").countdown360({
+        radius: 60,
+        seconds: 60,
+        fontColor: '#FFFFFF',
+        autostart: false,
+        onComplete: function () { SaveSafmedSession('41836D6C-E3F7-4F1A-9C3C-AECFB8C51BCA', countCorrect, countIncorrect) }
+
+            //function () { alert('timer reached zero, times up') }
+            //SaveSafmedSession('41836D6C-E3F7-4F1A-9C3C-AECFB8C51BCA', countCorrect, countIncorrect)
+        
+    }).start()
+
+
+
+    $("#card").flip();
+
+    $('div.front').click(function () {
+
+        CheckAnswer($('#safmedId').val(), $('#Answer').val());
+    })
+
+    $('div.back').click(function () {
+
+        GetQuestion();
+    })
+
+    function GetQuestion() {
+        var link = '@Html.Raw(Url.Action("GetSafmedQuestion", "MyAccount", new { level = "-1", topic = "-2" }))';
+        link = link.replace("-1", levelDropDownVal);
+        link = link.replace("-2", topicDropDownVal);
+
+        $('div.front').load(link);
+    }
+
+    function CheckAnswer(questionId, answer) {
+
+        var link = '@Html.Raw(Url.Action("CheckAnswerIsCorrect", "MyAccount", new { questionId = "-3", suppliedAnswer = "-4" }))';
+        //code smell
+        link = link.replace("-3", questionId);
+        link = link.replace("-4", answer);
+
+        $('div.back').load(link);
+    }
+
+    function SaveSafmedSession(userId, countCorrect, countIncorrect) {
+
+        $.ajax({
+            url: '/MyAccount/SaveSafmedSession',
+            type: 'POST',
+            data: {
+                userId: userId,
+                countCorrect: countCorrect,
+                countIncorrect: countIncorrect
+            },            
+            success: function (data) {                
+                $("#countdown").countdown360().stop;
+                $('#dialogSafmed').dialog().dialog('close');
+                location.reload();
+            },
+            error: function () {
+                alert("Error, Something went wrong");
+            }
+        });
+    }
+
+</script>

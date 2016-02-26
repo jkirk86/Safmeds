@@ -1,0 +1,152 @@
+﻿@model IEnumerable<Safmeds.Web.ViewModels.SafmedSessionViewModel>
+@using Microsoft.AspNet.Identity
+@using Safmeds.Repo.Enums
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>My Progress Dashboard @Html.ActionLink(User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" }) </h2>
+
+<br />
+
+@*@using (Html.BeginForm("Index", "MyAccount"))
+{*@
+    <div class="greenRound">
+
+        <h3>New Safmeds session?</h3>
+
+        <label>Select your Level</label>@Html.DropDownList("levelPreference", EnumHelper.GetSelectList(typeof(Levels)), new { @class = "form-control" })
+
+        <br />
+
+        <label>Select your Topic</label>@Html.DropDownList("topicPreference", EnumHelper.GetSelectList(typeof(Topics)), new { @class = "form-control" })
+
+        <br />
+
+        <button class="open-details">Start</button>
+        @*<input id="startSafmed" type="button" value="Begin Safmed!" />*@
+    </div>
+@*}*@
+
+<br />
+
+<div class="greenRound">
+
+    <h3>My Last 5 Results</h3>
+    <table class="table">
+        <tr>
+            <th>
+                <p>Session Id</p>
+            </th>
+            <th>
+                <p>Session Time</p>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Topic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correct)
+            </th>
+            <th>
+                <p>Not Yet</p>
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SafmedSessionId)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.SessionTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Topic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Correct)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NotYet)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <h3>My Overall Progress</h3>
+
+    <img src="http://www.mike250.com/c/m/20141028_multiple_labels_2.png" alt="My Current Progress Image" />
+    <br />
+
+</div>
+
+@*Pop-up the new safmeds session div*@
+<div id="dialogSafmed" title="Address Finder" style="overflow: hidden;"></div>
+@*Pop-up the new safmeds session div*@
+
+
+
+@section Scripts
+{
+    <script type="text/javascript">
+            
+
+            var levelDropDown = document.getElementById("levelPreference");
+            var levelDropDownVal = levelDropDown.options[levelDropDown.selectedIndex].value;
+            var topicDropDown = document.getElementById("topicPreference");
+            var topicDropDownVal = topicDropDown.options[topicDropDown.selectedIndex].value;
+            var countCorrect = 0;
+            var countIncorrect = 0;
+
+
+        $("#levelPreference").change(function () {
+            levelDropDownVal = levelDropDown.options[levelDropDown.selectedIndex].value;
+        });
+
+        $("#topicPreference").change(function () {
+            topicDropDownVal = topicDropDown.options[topicDropDown.selectedIndex].value;
+        });
+
+        $(function () {
+        $('button.open-details').click(function () {
+            $('#dialogSafmed').dialog({
+                autoOpen: false,
+                title: 'Say All Fast A Minute Each Day Shuffled!',
+                modal: true,
+                width: '550',
+                height: '230',
+                resizable: true,
+                show: {
+                    effect: "fade",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "fade",
+                    duration: 1000
+                },
+                open: function (event, ui) {
+
+                    //Load the NewSadmedSession action which will return
+                    // the partial view: _NewSafmedSession
+                    var link = '@Html.Raw(Url.Action("GetSafmedDialog", "MyAccount"))';
+
+                    $(this).load(link);
+                }
+
+            }).dialog('open');
+        });
+    });
+
+</script>
+}
