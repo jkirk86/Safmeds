@@ -28,8 +28,6 @@ namespace Safmeds.Web.Controllers
             List<SafmedSession> usersSafmedsSessionsList = _service.GetAllSafmedSessions();
             usersSafmedsSessionsList.RemoveAll(x => x.UserName != User.Identity.Name);
 
-            //var lastFiveProducts = products.OrderByDescending(p => p.ProductDate).Take(5);
-
             var safmedSessionViewModelList = AutoMapper.Mapper.Map<List<SafmedSession>, List<SafmedSessionViewModel>>(usersSafmedsSessionsList);
 
             safmedSessionViewModelList = safmedSessionViewModelList.OrderByDescending(x => x.SafmedSessionId).Take(5).ToList();
@@ -39,9 +37,7 @@ namespace Safmeds.Web.Controllers
                 return View(safmedSessionViewModelList);
             }
             else
-                return View("MustAuthenticate");
-
-            
+                return View("MustAuthenticate");            
         }
 
         //before we load the partial view, we need to know which questions to ask
@@ -85,24 +81,19 @@ namespace Safmeds.Web.Controllers
         [HttpPost]
         public ActionResult SaveSafmedSession(Guid userId, int countCorrect, int countIncorrect)
         {
-            var userGuid = User.Identity.GetUserId() ?? "USER0000-NOT0-AUTH0-ENTI-CATED0000000";
-
-            //STORE IN SAFMEDSESSION TABLE
+            var userGuid = User.Identity.GetUserId() ?? "USER0000-NOT0-AUTH0-ENTI-CATED0000000";            
 
             SafmedSessionViewModel sessionViewModel = new SafmedSessionViewModel();
             sessionViewModel.UserId = userId;
             sessionViewModel.Correct = countCorrect;
             sessionViewModel.NotYet = countIncorrect;
 
-            //TODO: Capture information off the page, not static as below
-            
+            //TODO: Capture information off the page, not static as below            
             sessionViewModel.Level = 1;
             sessionViewModel.Topic = "Adding";
-            sessionViewModel.UserName = "test_user@safmeds.co.uk";
+            sessionViewModel.UserName = User.Identity.Name;
 
-            int lastSession = _service.CreateSafmedSession(AutoMapper.Mapper.Map<SafmedSessionViewModel, SafmedSession>(sessionViewModel));
-
-            //REDIRECT TO INDEX, REFRESH DATA TO SHOW LAST SESSION ETC
+            int lastSession = _service.CreateSafmedSession(AutoMapper.Mapper.Map<SafmedSessionViewModel, SafmedSession>(sessionViewModel));           
 
             return RedirectToAction("Index");
         }
