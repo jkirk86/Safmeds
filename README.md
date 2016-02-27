@@ -10,3 +10,5 @@ Makes use of jquery.countdown360 and jquery.flip for to visualise the flashcard 
 
 Does not currently allow you to add/delete/modify questions, Action methods and views still need to be written.
 Dialog partial is currently swapping hard coded values with variables defined on parent index when getting questions ans checking answers.
+
+![alt tag](https://github.com/jkirk86/Safmeds/blob/master/gitHubImage.jpg)
